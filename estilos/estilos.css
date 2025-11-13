@@ -1,0 +1,397 @@
+/* =======================================================
+   VARIABLES
+======================================================= */
+:root {
+  --primary: #0077cc;
+  --secondary: #005fa3;
+  --light-bg: #f5f7fa;
+  --dark-text: #333;
+  --accent: #ffb400;
+  --radius: 10px;
+}
+
+/* =======================================================
+   RESETEANDO FORMATOS INICIALES
+======================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =======================================================
+   EN LA CABECERA
+======================================================= */
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#logo {
+  height: 60px;
+  border-radius: var(--radius);
+}
+
+header h4 {
+  font-size: 1.2rem;
+  text-align: center;
+  flex: 1;
+}
+
+/* =======================================================
+   MENÚ DE NAVEGACIÓN
+======================================================= */
+nav {
+  background-color: var(--secondary);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+nav ul li {
+  margin: 8px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--accent);
+  color: #111;
+}
+
+/* =======================================================
+   SECCIONES GENERALES
+======================================================= */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+section h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* =======================================================
+   SECCIÓN BIENVENIDOS
+======================================================= */
+#bienvenidos p {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+/* =======================================================
+   FORMULARIO DE CONTACTO
+======================================================= */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+form input[type="submit"] {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: var(--radius);
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--secondary);
+}
+
+/* =======================================================
+   CATÁLOGO DE PRODUCTOS
+======================================================= */
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.producto-card {
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.producto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.producto-card h2 {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.producto-card p {
+  margin: 5px 0;
+}
+
+.producto-card button {
+  background-color: var(--accent);
+  border: none;
+  color: #111;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.producto-card button:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* =======================================================
+   PIE DE PÁGINA 
+======================================================= */
+footer {
+  background-color: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+footer .redes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+footer .redes a {
+  color: white;
+  font-size: 1.8rem;
+  transition: 0.3s ease;
+}
+
+footer .redes a:hover {
+  transform: scale(1.2);
+}
+
+/* Colores por red */
+footer .whatsapp:hover {
+  color: #25D366;
+}
+
+footer .facebook:hover {
+  color: #1877F2;
+}
+
+footer .twitter:hover {
+  color: #1DA1F2;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+/* =======================================================
+   CARRITO DE COMPRAS
+======================================================= */
+#carrito {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 320px;
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+#carrito h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.item-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.item-carrito img {
+  border-radius: 4px;
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red;
+  font-size: 1rem;
+}
+
+.btn-vaciar {
+  width: 100%;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: var(--radius);
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn-vaciar:hover {
+  background-color: var(--accent);
+  color: #111;
+}
+
+/* =======================================================
+   ADAPTABILIDAD (RESPONSIVE DESIGN)
+======================================================= */
+
+/* 📱 Celulares pequeños */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .producto-card img {
+    height: 160px;
+  }
+
+  #carrito {
+    width: 90%;
+    right: 5%;
+    bottom: 10px;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  body {
+    padding: 10px;
+  }
+  
+  footer {
+    padding: 20px;
+  }
+
+  footer .redes a {
+    font-size: 1.5rem;
+  }
+
+  footer h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/*  Tabletas */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .contenedor-productos {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  #carrito {
+    width: 300px;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1025px) {
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
