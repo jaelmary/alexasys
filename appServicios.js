@@ -1,9 +1,9 @@
 // ==== Datos de servicios ====
 const serviciosJSON = [
-  { id: 1, nombre: "Mantenimiento PC de Escritorio", precio: 120.00, imagen: "imagenes/mantenimiento/escritorio.jpg" },
-  { id: 2, nombre: "Mantenimiento de Portátil", precio: 140.00, imagen: "imagenes/mantenimiento/portatil.jpeg" },
-  { id: 3, nombre: "Formateo de PC de Escritorio", precio: 160.00, imagen: "imagenes/mantenimiento/formateoEscritorio.png" },
-  { id: 4, nombre: "Formateo de Portátil", precio: 180.00, imagen: "imagenes/mantenimiento/formateoPortatil.png" }
+  { id: 1, nombre: "Mantenimiento PC de Escritorio", precio: 120.00, imagen: "IMAGENES/mantenimiento/escritorio.jpg" },
+  { id: 2, nombre: "Mantenimiento de Portátil", precio: 140.00, imagen: "IMAGENES/mantenimiento/portatil.jpeg" },
+  { id: 3, nombre: "Formateo de PC de Escritorio", precio: 160.00, imagen: "IMAGENES/mantenimiento/formateoEscritorio.png" },
+  { id: 4, nombre: "Formateo de Portátil", precio: 180.00, imagen: "IMAGENES/mantenimiento/formateoPortatil.png" }
 ];
 
 // ==== Variables globales ====
@@ -117,3 +117,4 @@ function vaciarCarrito() {
 mostrarServicios();
 
 mostrarCarrito();
+
